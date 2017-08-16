@@ -1,4 +1,4 @@
-# web2017
+# Programación WEB (electiva)
 
 ## Maquina Virtual
 
@@ -25,7 +25,7 @@ o VirtualBox [se puede descargar desde la web oficial de VirtualBox](https://www
 
 ## Instalar todo el software que usaremos
 
-en una pc con ubuntu recién Instalado tenemos que seguir los siguientes pasos
+en caso de no poder ejecutar la maquina virtual se puede seguir los siguientes pasos para instalar todo el software que usaremos en una pc con ubuntu recién Instalado.
 
 ### 1. Actualizar la base de datos local de paquetes
 
