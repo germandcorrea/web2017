@@ -47,11 +47,13 @@ si la maquina es virtual es recomendable instalar las tools para maquinas virtua
 sudo apt install open-vm-tools open-vm-tools-desktop
 ```
 
-### 4. Instalar chrome y visual studio code
+### 4. Instalar Google Chrome y Visual Studio Code
 
-#### 4.1 [Descargar "visual estudio code" desde la web oficial](https://code.visualstudio.com/download)
+**Visual Studio Code** y **Google Chrome** no están en los repositorios oficiales por lo que es necesario instalar desde el sitio web oficial de cada uno.
 
-#### 4.2 [Descargar "google chrome" desde desde la web oficial](https://www.google.com/chrome/index.html)
+#### 4.1 [Descargar **visual estudio code** desde la web oficial](https://code.visualstudio.com/download)
+
+#### 4.2 [Descargar **google chrome** desde desde la web oficial](https://www.google.com/chrome/index.html)
 
 #### 4.3 abrir una terminal
 
@@ -67,7 +69,7 @@ cd Descargas/
 sudo dpkg -i *.deb
 ```
 
-#### 4.6 instalar las dependencias faltantes para que funcione chrome y visual studio code
+#### 4.6 instalar las dependencias que faltan para que funcione chrome y visual studio code
 
 ```bash
 sudo apt --fix-broken install
