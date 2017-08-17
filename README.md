@@ -29,11 +29,16 @@ en caso de no poder ejecutar la maquina virtual se puede seguir los siguientes p
 
 ### 1. Actualizar la base de datos local de paquetes
 
+**sudo** permite ejecutar un comando con privilegios de superusuario **root**
+**apt**  es el nuevo gestor de paquetes de ubuntu pasando el parametro **update** actualiza la base de datos de paquetes deisponibles para ubuntu desde los repositorios que tenga configurado.
+
 ```bash
-sudo apt update -y
+sudo apt update
 ```
 
 ### 2. Actualizar los paquetes
+
+**apt upgrade** actualiza los paquetes instalados actualmente en el sistemas con el parametro adicional **-y** indicamos que no pida confirmación para actualizar
 
 ```bash
 sudo apt upgrade -y
@@ -41,7 +46,7 @@ sudo apt upgrade -y
 
 ### 3. Opcional (Si la maquina es Virtual es recomendable instalar open-vm-tools open-vm-tools-desktop)
 
-si la maquina es virtual es recomendable instalar las tools para maquinas virtuales, para tener compatibilidad con la resolución de pantalla, permitir el uso del porta papeles entre la maquina virtual y el host, etc.
+si la maquina que tiene instalado ubuntu es **virtual**, es recomendable instalar las tools para maquinas virtuales, para tener compatibilidad con la resolución de pantalla, permitir el uso del porta papeles entre la maquina virtual y el host, etc.
 
 ```bash
 sudo apt install open-vm-tools open-vm-tools-desktop
@@ -49,7 +54,7 @@ sudo apt install open-vm-tools open-vm-tools-desktop
 
 ### 4. Instalar Google Chrome y Visual Studio Code
 
-**Visual Studio Code** y **Google Chrome** no están en los repositorios oficiales por lo que es necesario instalar desde el sitio web oficial de cada uno.
+**Visual Studio Code** y **Google Chrome** lamentable mente no están en los repositorios oficiales por lo que es necesario instalar desde el sitio web oficial de cada uno, una vez instalado, se actualizan la fuentes de paquetes para que en el futuro cuando intentes actualizar el software puedas hacerlo directamente desde **apt**.
 
 #### 4.1 [Descargar **visual estudio code** desde la web oficial](https://code.visualstudio.com/download)
 
@@ -58,6 +63,7 @@ sudo apt install open-vm-tools open-vm-tools-desktop
 #### 4.3 abrir una terminal
 
 #### 4.4 ir al directorio de Descargas 
+el comando **cd** nos sirve para cambiarnos de directorio, por defecto cuando se abre una terminal el directorio en el que se está parado es el directorio home del usuario **/home/usuario** y dentro de ese directorio se encuentra el directorio **Descargas** que es donde se descargan los archivos por defecto.
 
 ```bash
 cd Descargas/
@@ -65,11 +71,16 @@ cd Descargas/
 
 #### 4.5 Instalar todos los paquetes con extensión **deb** que estén en el directorio Descargas
 
+**dpkg** también es un gestor de paquetes de debian linux, con el parámetro **-i** se indica que se va a instalar paquetes ***.deb** es una expresión regular que busca todos los archivos con extensión **deb** que es la extensión que usan las distribuciones basadas en debian linux para paquetes de instalacion.
+
 ```bash
 sudo dpkg -i *.deb
 ```
 
 #### 4.6 instalar las dependencias que faltan para que funcione chrome y visual studio code
+
+cuando se usa **dpkg** para instalar paquetes no se descargan las dependencias del software, por eso es necesario usar nuevamente **apt** con los parámetros
+**--fix-broken** para que descargue las dependencias necesarias
 
 ```bash
 sudo apt --fix-broken install
