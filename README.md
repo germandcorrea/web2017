@@ -38,7 +38,7 @@ sudo apt update
 
 ### 2. Actualizar los paquetes
 
-**apt upgrade** actualiza los paquetes instalados actualmente en el sistemas con el parametro adicional **-y** indicamos que no pida confirmación para actualizar
+**apt upgrade** actualiza los paquetes instalados actualmente en el sistemas con el parámetro adicional **-y** indicamos que no pida confirmación para actualizar
 
 ```bash
 sudo apt upgrade -y
@@ -71,7 +71,7 @@ cd Descargas/
 
 #### 4.5 Instalar todos los paquetes con extensión **deb** que estén en el directorio Descargas
 
-**dpkg** también es un gestor de paquetes de debian linux, con el parámetro **-i** se indica que se va a instalar paquetes ***.deb** es una expresión regular que busca todos los archivos con extensión **deb** que es la extensión que usan las distribuciones basadas en debian linux para paquetes de instalacion.
+**dpkg** también es un gestor de paquetes de debian linux, con el parámetro **-i** se indica que se va a instalar paquetes ***.deb** es una expresión regular que busca todos los archivos con extensión **deb** que es la extensión que usan las distribuciones basadas en debian linux para paquetes de instalación.
 
 ```bash
 sudo dpkg -i *.deb
